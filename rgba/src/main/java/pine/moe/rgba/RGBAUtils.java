@@ -4,6 +4,8 @@ import android.graphics.Color;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 
+import java.util.Locale;
+
 /**
  * Utilities for RGBA
  * Created by pine on 2017/08/04.
@@ -11,11 +13,12 @@ import android.support.annotation.NonNull;
 
 public class RGBAUtils {
     /**
-     * Convert RGBA string to Android color int
+     * Convert RGBA string to Android ARGB color int
+     *
      * @param rgba RGBA string
      * @return converted color
-     * @exception IllegalArgumentException invalid length
-     * @exception NumberFormatException invalid rgba format
+     * @throws IllegalArgumentException invalid length
+     * @throws NumberFormatException    invalid rgba format
      */
     @ColorInt
     public static int RGBAToColor(@NonNull String rgba) {
@@ -47,5 +50,22 @@ public class RGBAUtils {
         }
 
         throw new IllegalArgumentException("string length should be 4, 5, 8 or 9");
+    }
+
+    /**
+     * Convert Android color int to RGBA string
+     * @param color Android ARGB color int
+     * @return converted RGBA string (RRGGBBAA)
+     */
+    @NonNull
+    public static String colorToRGBA(@ColorInt int color) {
+        return String.format(
+                Locale.ENGLISH,
+                "%02X%02X%02X%02X",
+                Color.red(color),
+                Color.green(color),
+                Color.blue(color),
+                Color.alpha(color)
+        );
     }
 }

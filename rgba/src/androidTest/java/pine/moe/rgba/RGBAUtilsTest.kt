@@ -8,6 +8,7 @@ import org.junit.Test
 import org.junit.rules.ExpectedException
 import org.junit.runner.RunWith
 import pine.moe.rgba.RGBAUtils.RGBAToColor
+import pine.moe.rgba.RGBAUtils.colorToRGBA
 
 @RunWith(AndroidJUnit4::class)
 class RGBAUtilsTest {
@@ -107,5 +108,14 @@ class RGBAUtilsTest {
     fun testRGBAToColor_numberFormat() {
         this.thrown.expect(NumberFormatException::class.java)
         RGBAToColor("#XXXX")
+    }
+
+    @Test
+    fun testColorToRGBA() {
+        assertEquals("000000FF", colorToRGBA(Color.argb(0xff, 0x00, 0x00, 0x00)))
+        assertEquals("FF000000", colorToRGBA(Color.argb(0x00, 0xff, 0x00, 0x00)))
+        assertEquals("00FF0000", colorToRGBA(Color.argb(0x00, 0x00, 0xff, 0x00)))
+        assertEquals("0000FF00", colorToRGBA(Color.argb(0x00, 0x00, 0x00, 0xff)))
+        assertEquals("112233FF", colorToRGBA(Color.argb(0xff, 0x11, 0x22, 0x33)))
     }
 }
