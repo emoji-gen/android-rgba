@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 group 'moe.pine'
-version '0.1.2'
+version '0.1.0'
 
 android {
     compileSdkVersion 26
