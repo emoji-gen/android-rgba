@@ -2,8 +2,8 @@
 
 :art: RGBA color string utilities for Java
 
-<img src="palette.jpg" width="640">
+<img src="palette.jpg" width="490">
 
 ## License
 
-MIT &copy; Pine Mizune  
+MIT &copy; Pine Mizune
