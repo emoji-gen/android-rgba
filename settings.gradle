@@ -1,1 +1,1 @@
-include ':rgba'
+include ':rgba', ':rgba-kotlin'

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/android-rgba.iml" filepath="$PROJECT_DIR$/android-rgba.iml" />
       <module fileurl="file://$PROJECT_DIR$/rgba/rgba.iml" filepath="$PROJECT_DIR$/rgba/rgba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rgba-kotlin/rgba-kotlin.iml" filepath="$PROJECT_DIR$/rgba-kotlin/rgba-kotlin.iml" />
     </modules>
   </component>
 </project>

@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/rgba" />
+            <option value="$PROJECT_DIR$/rgba-kotlin" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
