@@ -1,6 +1,7 @@
 package pine.moe.rgba;
 
 import android.graphics.Color;
+import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 
 /**
@@ -9,6 +10,7 @@ import android.support.annotation.NonNull;
  */
 
 public class RGBAUtils {
+    @ColorInt
     public static int RGBAToColor(@NonNull String rgba) {
         if (rgba.isEmpty()) {
             throw new IllegalArgumentException("empty string not allowed");
