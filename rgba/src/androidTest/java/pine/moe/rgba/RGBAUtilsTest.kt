@@ -35,6 +35,12 @@ class RGBAUtilsTest {
         assertEquals(Color.argb(0xee, 0x00, 0x00, 0x00), RGBAToColor("000E"))
         assertEquals(Color.argb(0xff, 0x00, 0x00, 0x00), RGBAToColor("000F"))
 
+
+        assertEquals(Color.argb(0xff, 0x00, 0x00, 0x00), RGBAToColor("000f"))
+        assertEquals(Color.argb(0x00, 0xff, 0x00, 0x00), RGBAToColor("f000"))
+        assertEquals(Color.argb(0x00, 0x00, 0xff, 0x00), RGBAToColor("0f00"))
+        assertEquals(Color.argb(0x00, 0x00, 0x00, 0xff), RGBAToColor("00f0"))
+
         assertEquals(Color.argb(0x00, 0x00, 0x00, 0x00), RGBAToColor("00000000"))
         assertEquals(Color.argb(0xff, 0x00, 0x00, 0x00), RGBAToColor("000000ff"))
         assertEquals(Color.argb(0x00, 0xff, 0x00, 0x00), RGBAToColor("ff000000"))
