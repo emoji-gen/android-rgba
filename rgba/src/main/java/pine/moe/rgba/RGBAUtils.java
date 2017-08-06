@@ -10,6 +10,13 @@ import android.support.annotation.NonNull;
  */
 
 public class RGBAUtils {
+    /**
+     * Convert RGBA string to Android color int
+     * @param rgba RGBA string
+     * @return converted color
+     * @exception IllegalArgumentException invalid length
+     * @exception NumberFormatException invalid rgba format
+     */
     @ColorInt
     public static int RGBAToColor(@NonNull String rgba) {
         if (rgba.isEmpty()) {

@@ -3,12 +3,18 @@ package pine.moe.rgba
 import android.graphics.Color
 import android.support.test.runner.AndroidJUnit4
 import org.junit.Assert.assertEquals
+import org.junit.Rule
 import org.junit.Test
+import org.junit.rules.ExpectedException
 import org.junit.runner.RunWith
 import pine.moe.rgba.RGBAUtils.RGBAToColor
 
 @RunWith(AndroidJUnit4::class)
 class RGBAUtilsTest {
+    @Rule
+    @JvmField
+    val thrown: ExpectedException = ExpectedException.none()
+
     @Test
     fun testRGBAToColor() {
         assertEquals(Color.argb(0x00, 0x00, 0x00, 0x00), RGBAToColor("0000"))
@@ -34,7 +40,6 @@ class RGBAUtilsTest {
         assertEquals(Color.argb(0xdd, 0x00, 0x00, 0x00), RGBAToColor("000D"))
         assertEquals(Color.argb(0xee, 0x00, 0x00, 0x00), RGBAToColor("000E"))
         assertEquals(Color.argb(0xff, 0x00, 0x00, 0x00), RGBAToColor("000F"))
-
 
         assertEquals(Color.argb(0xff, 0x00, 0x00, 0x00), RGBAToColor("000f"))
         assertEquals(Color.argb(0x00, 0xff, 0x00, 0x00), RGBAToColor("f000"))
@@ -68,5 +73,39 @@ class RGBAUtilsTest {
         assertEquals(Color.argb(0x00, 0x00, 0xff, 0x00), RGBAToColor("#00FF0000"))
         assertEquals(Color.argb(0x00, 0x00, 0x00, 0xff), RGBAToColor("#0000FF00"))
         assertEquals(Color.argb(0xff, 0xff, 0xff, 0xff), RGBAToColor("#FFFFFFFF"))
+    }
+
+    @Test
+    fun testRGBAToColor_emptyString() {
+        this.thrown.expect(IllegalArgumentException::class.java)
+        this.thrown.expectMessage("empty string not allowed")
+        RGBAToColor("")
+    }
+
+    @Test
+    fun testRGBAToColor_illegalLength_3() {
+        this.thrown.expect(IllegalArgumentException::class.java)
+        this.thrown.expectMessage("string length should be 4, 5, 8 or 9")
+        RGBAToColor("#".repeat(3))
+    }
+
+    @Test
+    fun testRGBAToColor_illegalLength_6() {
+        this.thrown.expect(IllegalArgumentException::class.java)
+        this.thrown.expectMessage("string length should be 4, 5, 8 or 9")
+        RGBAToColor("#".repeat(6))
+    }
+
+    @Test
+    fun testRGBAToColor_illegalLength_10() {
+        this.thrown.expect(IllegalArgumentException::class.java)
+        this.thrown.expectMessage("string length should be 4, 5, 8 or 9")
+        RGBAToColor("#".repeat(10))
+    }
+
+    @Test
+    fun testRGBAToColor_numberFormat() {
+        this.thrown.expect(NumberFormatException::class.java)
+        RGBAToColor("#XXXX")
     }
 }
