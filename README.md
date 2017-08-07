@@ -4,6 +4,36 @@
 
 <img src="palette.jpg" width="490">
 
+## Requirements
+
+- Android 4.0.3 (API Level 15) or later
+
+## Getting Started
+Please type it in your build.gradle file.
+
+```groovy
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'moe.pine.rgba:rgba:0.1.0'
+    compile 'moe.pine.rgba:rgba-kotlin:0.1.0' // for Kotlin Extension
+}
+```
+
+## Usage
+
+```java
+int color = RGBAUtils.RGBAToColor("#00ff00ff");
+String rgba = RGBAUtils.colorToRGBA(color);
+```
+
+```kotlin
+val color = "#00ff00ff".toColor()
+val rgba = color.toRGBA()
+```
+
 ## Upload to Bintray
 
 ```
