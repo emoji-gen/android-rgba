@@ -12,4 +12,4 @@ $ ./gradlew clean assemble bintrayUpload
 
 ## License
 
-MIT &copy; Emoji Generator
+MIT &copy; [Emoji Generator](https://emoji.pine.moe/)
