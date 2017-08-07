@@ -34,3 +34,7 @@ after_failure:
       if [ -f "$TRAVIS_BUILD_DIR/android-rgba/build/reports/lint-results.html" ]; then
         lynx -dump "$TRAVIS_BUILD_DIR/android-rgba/build/reports/lint-results.html"
       fi
+
+notifications:
+  slack:
+    - secure: "cfUrS6sy4ttWQPDtWk0nR1vllgkaCnhb808W7Su72XQAJXtSugihLT2zc2oI4MDOCBKYDMEwacPyT7555Jskvgu6ZBmPoH/SejknLXvnwnQ0Cfe8pL66xl0J40KjlnkW8NxF1r54yyuXdB6BZ7zTVyjuTFjlhR9xuCzQHSI2bSUXWHOrNnwrLPBjPz8k5O8lgRU9YoTPx24O0z0RrmbCkX+qrZnwTOg3NtpLoDxVDD2qv9LZ2MH19cUgLNuL/vwurIegQeNk5JnO2X7n306ke+MvyaYCrRceivTwOgR7hKIEw0TUt/JBJ5SdupAXR7iAJGdPht1DgB6NgOu/osjwBXKxLjeAv8r7qWH75yf+n3A1IpWiEKRsgjxkJujEkGDW+D2PMcQwiFb7HhKVfpoqp58gVOQKL/XfW0gKrzL3mjx5LNcLvIq5XA/Ysc4yg8a/skPMJ7QMmoX1r9lz8/fNafOy4KBk5J6XkrgzJTQ2Gyc31dQkPXUe/e0gi/OX+MgGNI2QRdtj0CwgXgqupWhIvBRb2mnpAlCjh0rxjfTtc/PX1d3rTIzBwMci5y/fONlodLPpo2TqDStA+kf+AM3vyUlqf++egjie0tcRaaa+Uji0Spz3whMJLZ+vTsUyacDdvtGmGPRnBCN9Z6ikxymePW+D3WipjAEQXmuIqtT9FjA="
