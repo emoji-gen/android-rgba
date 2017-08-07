@@ -1,4 +1,4 @@
-# Android RGBA
+# Android RGBA &nbsp;[![Build Status](https://travis-ci.org/emoji-gen/android-rgba.svg?branch=master)](https://travis-ci.org/emoji-gen/android-rgba)
 
 :art: RGBA color string utilities for Java
 
