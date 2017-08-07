@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-group 'moe.pine'
+group 'moe.pine.rgba'
 version '0.1.0'
 
 android {
