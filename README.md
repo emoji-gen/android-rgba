@@ -1,6 +1,6 @@
 # Android RGBA &nbsp;[![Build Status](https://travis-ci.org/emoji-gen/android-rgba.svg?branch=master)](https://travis-ci.org/emoji-gen/android-rgba) [![codebeat badge](https://codebeat.co/badges/57f059eb-040e-46a9-848a-2cb8cd5e7533)](https://codebeat.co/projects/github-com-emoji-gen-android-rgba-master)
 
-:art: RGBA color string utilities for Java
+:art: RGBA color string utilities for Android
 
 <img src="palette.jpg" width="490">
 
