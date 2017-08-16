@@ -23,12 +23,14 @@ dependencies {
 ```
 
 ## Usage
+### Java
 
 ```java
 int color = RGBAUtils.RGBAToColor("#00ff00ff");
 String rgba = RGBAUtils.colorToRGBA(color);
 ```
 
+### Kotlin
 ```kotlin
 val color = "#00ff00ff".toColor()
 val rgba = color.toRGBA()
